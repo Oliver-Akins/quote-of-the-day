@@ -1,3 +1,7 @@
+src/config.ts
+package-lock.json
+built/*
+
 # Logs
 logs
 *.log
