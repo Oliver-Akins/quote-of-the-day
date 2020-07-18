@@ -1,7 +1,7 @@
 //
 // main.ts
 //
-// Written by: Tyler Akins (2019/12/31)
+// Written by: Tyler Akins (2019/12/31 - 2020/01/01)
 //
 
 
@@ -29,6 +29,12 @@ const MAIN = async () => {
             console.log("Can't have a delay < 30 seconds.");
             process.exit(1);
         };
+
+
+        if (args.includes("--initial")) {
+            await WEBHOOK_PUSH(await GET_RANDOM_QUOTE());
+        };
+
 
         setInterval(
             async () => {
